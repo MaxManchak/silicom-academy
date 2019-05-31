@@ -1,0 +1,59 @@
+.screen-4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+
+    & p {
+      font-size: 16px;
+      line-height: 1.19;
+    }
+
+    & b {
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    &::after {
+      content: '';
+      width: 280px;
+      height: 389px;
+      background-image: url(../images/mob-methode-5.1.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 90px;
+    }
+  }
+}
+
+
+@media (min-width:1000px) {
+  .screen-4 {
+    padding-bottom: 100px;
+
+    &__block {
+      max-width: 700px;
+
+      &::before {
+        width: 821px;
+        height: 443px;
+        display: block;
+        content: '';
+        margin-bottom: 65px;
+        background-image: url(../images/screen-4.1-bg.jpg);
+      }
+
+      &::after {
+        width: 372px;
+        height: 451px;
+        background-image: url(../images/screen-5-bg.jpg);
+      }
+    }
+  }
+}

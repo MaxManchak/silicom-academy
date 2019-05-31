@@ -1,0 +1,193 @@
+.screen-3 {
+  position: relative;
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__block-title {
+    font-family: $ffb;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 300px;
+    line-height: 1.19;
+  }
+
+  &__block-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      content: '';
+      width: 138px;
+      height: 250px;
+      background-image: url(../images/mob-methode-1.1.svg);
+      background-size: contain;
+      margin-top: 6px;
+      margin-bottom: 8px;
+    }
+
+    &::after {
+      content: '';
+      width: 304px;
+      height: 516px;
+      background-image: url(../images/mob-methode-1.svg);
+      background-size: contain;
+      margin-top: 22px;
+      margin-bottom: 35px;
+    }
+
+
+  }
+
+  &__block-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+      max-width: 346px;
+    }
+
+    &::before {
+      content: '';
+      width: 138px;
+      height: 250px;
+      background-image: url(../images/mob-methode-2.1.svg);
+      background-size: contain;
+      margin-top: 0px;
+      margin-bottom: 8px;
+    }
+
+    &::after {
+      content: '';
+      width: 296px;
+      height: 345px;
+      background-image: url(../images/mob-methode-2.svg);
+      background-size: contain;
+      margin-top: 5px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__block-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+      max-width: 346px;
+    }
+
+    &::before {
+      content: '';
+      width: 138px;
+      height: 250px;
+      background-image: url(../images/mob-methode-3.1.svg);
+      background-size: contain;
+      margin-top: 0px;
+      margin-bottom: 8px;
+    }
+
+    &::after {
+      content: '';
+      width: 280px;
+      height: 289px;
+      background-image: url(../images/mob-methode-3.svg);
+      background-size: contain;
+      margin-top: 30px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__block-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+      max-width: 346px;
+    }
+
+    &::before {
+      content: '';
+      width: 138px;
+      height: 250px;
+      background-image: url(../images/mob-methode-4.1.svg);
+      background-size: contain;
+      margin-top: 3px;
+      margin-bottom: 2px;
+    }
+
+    &::after {
+      content: '';
+      width: 311px;
+      height: 500px;
+      background-image: url(../images/mob-methode-4.svg);
+      background-size: contain;
+      margin-top: 22px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+
+@media (min-width:1000px) {
+  .screen-3 {
+    background-image: url(../images/screen-4-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    height: 1610px;
+    position: relative;
+    padding-bottom: 80px;
+
+    &__block-1,
+    &__block-2,
+    &__block-3,
+    &__block-4 {
+      position: absolute;
+      background-color: #fff;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__block-1 {
+      top: 24%;
+      left: 4%;
+    }
+
+    &__block-2 {
+      top: 49%;
+      right: 0%;
+      padding-left: 50px;
+    }
+
+    &__block-3 {
+      top: 71%;
+      left: -1%;
+    }
+
+    &__block-4 {
+      top: 91%;
+      right: 0%;
+    }
+
+    &__block-left {
+      display: none;
+    }
+
+    & .scroll {
+      bottom: 0px;
+    }
+  }
+}

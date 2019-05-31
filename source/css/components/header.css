@@ -1,0 +1,287 @@
+.header {
+  background-color: #00303C;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .38);
+  overflow: auto;
+
+  & .socials,
+  & .navigation {
+    display: none;
+  }
+
+  &--active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+
+    & .header__logo {
+      align-self: flex-start;
+    }
+
+    & .socials,
+    & .navigation {
+      display: flex;
+    }
+
+  }
+
+  &__container {
+    position: relative;
+
+    .header--active & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+  }
+
+  &__logo {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: block;
+    max-width: 135px;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+
+.nav-toggle {
+  overflow: hidden;
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  right: 0;
+  top: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header--active & {
+    transform: translateX(10px) translateY(-5px);
+  }
+
+  & span {
+    width: 38px;
+    height: 2px;
+    margin-bottom: 8px;
+    background: #fff;
+    border-radius: 4px;
+    transition: all .5s cubic-bezier(.08, .81, .87, .71);
+  }
+
+  &__span1 {
+    transform-origin: 3px 0px;
+  }
+
+  &__span3 {
+    transform-origin: -3px 0px;
+  }
+
+  &--active &__span1 {
+    background-color: #fff;
+    transform: rotate(45deg) translate(3px);
+  }
+
+  &--active &__span2 {
+    background-color: #fff;
+    transform: rotate(495deg) translate(4px);
+  }
+
+  &--active &__span3 {
+    background-color: #fff;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+.navigation {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & li:not(:last-child) {
+    & a {
+      &::after {
+        width: 30px;
+        height: 1px;
+        background-color: #fff;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $ffb;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    display: block;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+
+.socials {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: auto;
+
+  &__icon {
+    width: 33px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    &--fb {
+      background-image: url(../images/icon-fb.svg);
+    }
+
+    &--inst {
+      background-image: url(../images/icon-inst.svg);
+    }
+
+    &--li {
+      background-image: url(../images/icon-lin.svg);
+    }
+
+    &--tw {
+      background-image: url(../images/icon-tw.svg);
+    }
+  }
+}
+
+
+@media (min-width:1000px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .header {
+    top: 0;
+    height: auto;
+    position: fixed;
+    width: 100%;
+    bottom: auto;
+    z-index: 10;
+
+    &__container {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+    }
+
+    & .socials,
+    & .navigation {
+      display: flex;
+    }
+
+    &__logo {
+      max-width: 280px;
+      margin-right: auto;
+      width: 100%;
+    }
+
+  }
+
+  .navigation {
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-right: 14px;
+
+    & ul {
+      flex-direction: row;
+    }
+
+    & a {
+      font-size: 12px;
+      font-family: $ffb;
+      font-weight: 300;
+      padding-left: 14px;
+      padding-right: 14px;
+      padding-top: 65px;
+      padding-bottom: 55px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .socials {
+    margin-bottom: auto;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+
+    &::before,
+    &::after {
+      content: '';
+      height: 100%;
+      width: 1px;
+      display: block;
+      background-color: rgba(255, 255, 255, .28);
+      position: absolute;
+      top: 0;
+
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &__icon {
+      width: 19px;
+      height: 19px;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+}

@@ -1,0 +1,183 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ffh;
+
+  &.fixed {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+// использование системных шрифтов
+.system-font-stack {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+a[href^='tel'] {
+  white-space: nowrap;
+  pointer-events: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 30em) {
+  a[href^='tel'] {
+    pointer-events: auto;
+    text-decoration: underline;
+  }
+}
+
+.container {
+  width: calc(100% - 40px);
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+label,
+button,
+input,
+select {
+  cursor: pointer;
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+// Responsive media
+img,
+video,
+audio {
+  max-width: 100%;
+  height: auto;
+}
+
+// Если текст длинный и не влазит в одну строку (окончание элипсами)
+.truncate-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ffb;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  font-family: $ffh;
+  font-weight: 300;
+  margin-top: 0;
+
+
+}
+
+.wrapper {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.upper {
+  text-transform: uppercase;
+}
+
+
+@media (min-width:1000px) {
+  body {
+    padding-top: 133px;
+  }
+
+  .wrapper__inner {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+
+
+.scroll {
+  width: 26px;
+  height: 44px;
+  border-radius: 13px;
+  border: 1px solid #000;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+
+  &::before {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+
+    left: calc(50% - 1px);
+    top: 5px;
+    content: '';
+    position: absolute;
+    background-color: #000;
+    animation-name: scrollAnimation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out
+  }
+
+  &--white {
+    border: 1px solid #fff;
+
+    &::before {
+      background-color: #fff;
+    }
+  }
+
+  &-4 {
+    bottom: auto;
+    top: 0;
+  }
+
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(0)
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}

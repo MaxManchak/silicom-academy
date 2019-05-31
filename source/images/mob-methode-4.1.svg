@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="139px" height="235px" viewBox="0 0 139 235" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>mob-methode-4.1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M50.96978,51.84944 L39.81752,51.84944 L39.81752,62 L35.47682,62 L35.47682,51.84944 L2.8214,51.84944 L2.8214,47.57552 L35.47682,13.65128 L39.81752,13.65128 L39.81752,47.6423 L50.96978,47.6423 L50.96978,51.84944 Z M35.47682,47.6423 L35.47682,18.65978 L7.02854,47.6423 L35.47682,47.6423 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mob-methode-4.1" transform="translate(1.000000, 0.000000)">
+            <circle id="Oval" stroke="#161615" cx="68.896" cy="140.92" r="68.552"></circle>
+            <g id="Group" transform="translate(38.000000, 102.953000)">
+                <g id="4">
+                    <use fill="#000000" xlink:href="#path-1"></use>
+                    <use fill="#161615" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <path d="M68.896,0 L68.896,73.33" id="Path" stroke="#161615"></path>
+            <path d="M68.896,209.615 L68.896,234.684" id="Path" stroke="#161615"></path>
+        </g>
+    </g>
+</svg>
