@@ -114,16 +114,6 @@ p {
 }
 
 
-@media (min-width:1000px) {
-  body {
-    padding-top: 133px;
-  }
-
-  .wrapper__inner {
-    width: 960px;
-    margin: 0 auto;
-  }
-}
 
 
 
@@ -135,6 +125,8 @@ p {
   position: absolute;
   bottom: 70px;
   left: 50%;
+  display: none;
+
 
   &::before {
     width: 3px;
@@ -154,6 +146,7 @@ p {
 
   &--white {
     border: 1px solid #fff;
+    transform: translateX(-50%);
 
     &::before {
       background-color: #fff;
@@ -179,5 +172,22 @@ p {
   100% {
     transform: translateY(20px);
     opacity: 0;
+  }
+}
+
+
+
+@media (min-width:1000px) {
+  body {
+    padding-top: 133px;
+  }
+
+  .wrapper__inner {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .scroll {
+    display: block;
   }
 }
