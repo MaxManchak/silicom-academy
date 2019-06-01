@@ -45,6 +45,10 @@
     max-width: 260px;
     margin-bottom: 27px;
 
+    & a {
+      text-decoration: none;
+    }
+
     & b {
       font-weight: bold;
     }
@@ -54,6 +58,8 @@
     padding-top: 22px;
     position: relative;
     position: relative;
+    color: #000;
+    text-decoration: none;
 
     &::after {
       width: 62px;

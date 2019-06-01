@@ -1,4 +1,4 @@
-(function($) {
+jQuery(document).ready(function($) {
 	$('.js-nav-toggle').click(function() {
 		console.log('click');
 
@@ -85,4 +85,4 @@
 			topNavigationActive(windowScrollPosition);
 		}
 	});
-})(jQuery);
+});
