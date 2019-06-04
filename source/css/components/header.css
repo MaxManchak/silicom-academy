@@ -2,6 +2,10 @@
   background-color: #00303C;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .38);
   overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   & .socials,
   & .navigation {
@@ -12,8 +16,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,7 +110,7 @@
 
 
 .navigation {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 

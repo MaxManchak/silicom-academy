@@ -141,12 +141,14 @@
 
 @media (min-width:1000px) {
   .screen-3 {
-    background-image: url(../images/screen-4-bg.jpg);
+    background-image: url(../images/screen-4-bg.png);
+    background-size: 821px;
     background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-position: 50% top;
     height: 1610px;
     position: relative;
     padding-bottom: 80px;
+    margin-bottom: 20px;
 
     &__block-1,
     &__block-2,

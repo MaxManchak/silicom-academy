@@ -1,7 +1,5 @@
 jQuery(document).ready(function($) {
 	$('.js-nav-toggle').click(function() {
-		console.log('click');
-
 		$(this).toggleClass('nav-toggle--active');
 		$('.header').toggleClass('header--active');
 		$('body').toggleClass('fixed');
@@ -21,7 +19,7 @@ jQuery(document).ready(function($) {
 			500 // скорость прокрутки
 		);
 	};
-	$('.js-navigation a').click(function(e) {
+	$(' a[href^="#"]').click(function(e) {
 		// e.preventDefault();
 		hideNavigation();
 

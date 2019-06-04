@@ -216,7 +216,8 @@
 @media (min-width:1000px) {
   .screen-2 {
     height: 2383px;
-    background-image: url(../images/screen-2-bg.jpg);
+    background-image: url(../images/screen-2-bg.png);
+    background-size: 821px;
     background-repeat: no-repeat;
     background-position: 50% bottom;
     padding-top: 156px;
