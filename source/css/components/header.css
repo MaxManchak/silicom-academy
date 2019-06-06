@@ -222,6 +222,7 @@
 
     &__logo {
       max-width: 280px;
+      max-width: 196px;
       margin-right: auto;
       width: 100%;
     }
@@ -245,6 +246,8 @@
       padding-right: 14px;
       padding-top: 65px;
       padding-bottom: 55px;
+      padding-top: 45px;
+      padding-bottom: 35px;
 
       &::after {
         display: none;

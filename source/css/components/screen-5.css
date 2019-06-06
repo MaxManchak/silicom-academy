@@ -46,7 +46,8 @@
     margin-bottom: 27px;
 
     & a {
-      text-decoration: none;
+			text-decoration: none;
+			color: #000;
     }
 
     & b {
@@ -102,7 +103,6 @@
     &__img-2 {
       transform: rotate(-65deg);
       left: 102%;
-      text-outline: 0 0 #000;
       top: 49%;
       background-image: url(../images/contacts.bg@2x.png);
     }
@@ -143,8 +143,7 @@
       width: 60%;
       transform: rotate(-65deg);
       left: 102%;
-      text-outline: 0 0 #000;
-      : 49%;
+      top: 49%;
       background-image: url(../images/contacts.bg-2@2x.png);
     }
   }

@@ -140,7 +140,10 @@
     text-decoration: none;
     max-width: 260px;
     margin-bottom: 27px;
-
+		& a {
+			text-decoration: none;
+			color: #000;
+		}
     & b {
       font-weight: bold;
     }

@@ -12,9 +12,10 @@ jQuery(document).ready(function($) {
 	};
 
 	let scrollSite = href => {
+		let height = $('.header').height();
 		$('html').animate(
 			{
-				scrollTop: $(href).offset().top - 138, // прокручиваем страницу к требуемому элементу
+				scrollTop: $(href).offset().top - height, // прокручиваем страницу к требуемому элементу
 			},
 			500 // скорость прокрутки
 		);
